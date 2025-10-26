@@ -1,0 +1,10 @@
+#!/bin/sh
+'''exec' "/Users/parinmac/Library/CloudStorage/Dropbox/精神科_個人資料存檔/博班/就讀-清大/課程/114上-資料探勘與應用Data Mining/DM2025Labs/DM2025-Lab2-Exercise/venv/bin/python3.11" "$0" "$@"
+' '''
+# -*- coding: utf-8 -*-
+import re
+import sys
+from pip._internal.cli.main import main
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())
