@@ -1,0 +1,273 @@
+<style>
+.lx-highlight { position: relative; border-radius:3px; padding:1px 2px;}
+.lx-highlight .lx-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  background: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 4px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  max-width: 240px;
+  white-space: normal;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.lx-highlight:hover .lx-tooltip { visibility: visible; opacity:1; }
+.lx-animated-wrapper { max-width: 100%; font-family: Arial, sans-serif; }
+.lx-controls {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 8px;
+  padding: 12px; margin-bottom: 16px;
+}
+.lx-button-row {
+  display: flex; justify-content: center; gap: 8px; margin-bottom: 12px;
+}
+.lx-control-btn {
+  background: #4285f4; color: white; border: none; border-radius: 4px;
+  padding: 8px 16px; cursor: pointer; font-size: 13px; font-weight: 500;
+  transition: background-color 0.2s;
+}
+.lx-control-btn:hover { background: #3367d6; }
+.lx-progress-container {
+  margin-bottom: 8px;
+}
+.lx-progress-slider {
+  width: 100%; margin: 0; appearance: none; height: 6px;
+  background: #ddd; border-radius: 3px; outline: none;
+}
+.lx-progress-slider::-webkit-slider-thumb {
+  appearance: none; width: 18px; height: 18px; background: #4285f4;
+  border-radius: 50%; cursor: pointer;
+}
+.lx-progress-slider::-moz-range-thumb {
+  width: 18px; height: 18px; background: #4285f4; border-radius: 50%;
+  cursor: pointer; border: none;
+}
+.lx-status-text {
+  text-align: center; font-size: 12px; color: #666; margin-top: 4px;
+}
+.lx-text-window {
+  font-family: monospace; white-space: pre-wrap; border: 1px solid #90caf9;
+  padding: 12px; max-height: 260px; overflow-y: auto; margin-bottom: 12px;
+  line-height: 1.6;
+}
+.lx-attributes-panel {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 6px;
+  padding: 8px 10px; margin-top: 8px; font-size: 13px;
+}
+.lx-current-highlight {
+  border-bottom: 4px solid #ff4444;
+  font-weight: bold;
+  animation: lx-pulse 1s ease-in-out;
+}
+@keyframes lx-pulse {
+  0% { text-decoration-color: #ff4444; }
+  50% { text-decoration-color: #ff0000; }
+  100% { text-decoration-color: #ff4444; }
+}
+.lx-legend {
+  font-size: 12px; margin-bottom: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid #e0e0e0;
+}
+.lx-label {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-right: 4px;
+  color: #000;
+}
+.lx-attr-key {
+  font-weight: 600;
+  color: #1565c0;
+  letter-spacing: 0.3px;
+}
+.lx-attr-value {
+  font-weight: 400;
+  opacity: 0.85;
+  letter-spacing: 0.2px;
+}
+
+/* Add optimizations with larger fonts and better readability for GIFs */
+.lx-gif-optimized .lx-text-window { font-size: 16px; line-height: 1.8; }
+.lx-gif-optimized .lx-attributes-panel { font-size: 15px; }
+.lx-gif-optimized .lx-current-highlight { text-decoration-thickness: 4px; }
+</style>
+    <div class="lx-animated-wrapper lx-gif-optimized">
+      <div class="lx-attributes-panel">
+        <div class="lx-legend">Highlights Legend: <span class="lx-label" style="background-color:#D2E3FC;">audience_impact</span> <span class="lx-label" style="background-color:#C8E6C9;">opinion_statement</span></div>
+        <div id="attributesContainer"></div>
+      </div>
+      <div class="lx-text-window" id="textWindow">
+        **Page 1**
+&quot;&quot;&quot;
+The Godfather 
+Action 175 minutes ‧ R ‧ 1972 
+Roger Ebert January 1, 1972 
+4 min read 
+We know from Gay Talese’s book Honor Thy Father that being a professional 
+mobster isn’t all sunshine and roses. More often, it’s the boredom of stuJy 
+rooms and a bad diet of carry-out food, punctuated by brief, terrible bursts of 
+violence. This is exactly the feel of “The Godfather,” which <span class="lx-highlight lx-current-highlight" data-idx="0" style="background-color:#C8E6C9;">brushes aside the 
+ﬂashy glamour of the traditional gangster picture and gives us what’s left</span>: <span class="lx-highlight" data-idx="1" style="background-color:#C8E6C9;">ﬁerce 
+tribal loyalties, deadly little neighborhood quarrels in Brooklyn, and a form of 
+vengeance to match every aJront</span>. 
+The remarkable thing about Mario Puzo’s novel was <span class="lx-highlight" data-idx="2" style="background-color:#C8E6C9;">the way it seemed to be told 
+from the inside out</span>; he didn’t give us a world of international intrigue, but <span class="lx-highlight" data-idx="3" style="background-color:#C8E6C9;">a 
+private club as constricted as the seventh grade</span>. Everybody knew everybody else 
+and had a pretty shrewd hunch what they were up to. 
+The movie (based on a script labored over for some time by Puzo and then ﬁnally 
+given form, I suspect, by director Francis Ford Coppola) <span class="lx-highlight" data-idx="4" style="background-color:#C8E6C9;">gets the same feel</span>. We 
+tend to identify with Don Corleone’s family not because we dig gang wars, but 
+because we have been with them from the beginning, <span class="lx-highlight" data-idx="5" style="background-color:#C8E6C9;">watching them wait for 
+battle while sitting at the kitchen table and eating chow mein out of paper 
+cartons</span>. 
+“The Godfather” himself is <span class="lx-highlight" data-idx="6" style="background-color:#C8E6C9;">not even the central character in the drama</span>. That 
+position goes to <span class="lx-highlight" data-idx="7" style="background-color:#C8E6C9;">the youngest, brightest son, Michael, who understands the 
+nature of his father’s position while revising his old-fashioned ways</span>. The 
+Godfather’s role in the family enterprise is described by his name; he stands 
+outside the next generation which will carry on and, hopefully, angle the family 
+into legitimate enterprises. 
+Those who have read the novel may be surprised to ﬁnd Michael at the center of 
+the movie, instead of Don Corleone. In fact, this is simply <span class="lx-highlight" data-idx="8" style="background-color:#C8E6C9;">an economical way</span> for
+&quot;&quot;&quot;
+
+**Page 2**
+&quot;&quot;&quot;
+Coppola to get at the heart of the Puzo story, which dealt with the transfer of 
+power within the family. <span class="lx-highlight" data-idx="9" style="background-color:#C8E6C9;">Marlon Brando, who plays the Godfather as a shrewd, 
+unbreakable old man, actually has the character lead in the movie</span>; <span class="lx-highlight" data-idx="10" style="background-color:#C8E6C9;">Al Pacino, 
+with a brilliantly developed performance as Michael, is the lead</span>. 
+But <span class="lx-highlight" data-idx="11" style="background-color:#C8E6C9;">Brando’s performance is a skillful throwaway</span>, even though it earned him an 
+Academy Award for best actor. <span class="lx-highlight" data-idx="12" style="background-color:#C8E6C9;">His voice is wheezy and whispery, and his 
+physical movements deliberately lack precision</span>; <span class="lx-highlight" data-idx="13" style="background-color:#C8E6C9;">the eJect is of a man so 
+accustomed to power that he no longer needs to remind others</span>. <span class="lx-highlight" data-idx="14" style="background-color:#C8E6C9;">Brando does 
+look the part of old Don Corleone</span>, mostly because of acting and partly because 
+of the makeup, although he seems to have stuJed a little too much cotton into 
+his jowls, making his lower face immobile. 
+<span class="lx-highlight" data-idx="15" style="background-color:#C8E6C9;">The rest of the actors supply one example after another of inspired casting</span>. 
+Although “The Godfather” is a long, minutely detailed movie of some three hours, 
+there naturally isn’t time to go into the backgrounds and identities of such 
+characters as Clemenza, the family lieutenant; Jack Woltz, the movie czar; Luca 
+Brasi, the loyal professional killer; McCluskey, the crooked cop; and the rest. 
+Coppola and producer Al Ruddy skirt this problem with understated typecasting. 
+As the Irish cop, for example, they simply slide in Sterling Hayden and let the 
+character go about his business. <span class="lx-highlight" data-idx="16" style="background-color:#C8E6C9;">Richard Castellano is an unshakable 
+Clemenza</span>. <span class="lx-highlight" data-idx="17" style="background-color:#C8E6C9;">John Marley makes a perfectly hateful Hollywood mogul</span> (and, yes, he 
+still wakes up to ﬁnd he’ll have to cancel his day at the races). 
+The success of “The Godfather” as a novel was largely due to a series of 
+unforgettable scenes. <span class="lx-highlight" data-idx="18" style="background-color:#C8E6C9;">Puzo is a good storyteller, but no great shakes as a writer</span>. 
+The movie gives almost everything in the novel except the gynecological repair 
+job. It doesn’t miss a single killing; it opens with the wedding of Don Corleone’s 
+daughter (and attendant upstairs activity); and there are the right number of auto 
+bombs, double crosses, and garrotings. 
+Coppola has found a style and a visual look for all this material so “The 
+Godfather” becomes something of a rarity: <span class="lx-highlight" data-idx="19" style="background-color:#C8E6C9;">a really good movie squeezed from a 
+bestseller</span>. <span class="lx-highlight" data-idx="20" style="background-color:#C8E6C9;">The decision to shoot everything in period decor (the middle and late 
+1940s) was crucial</span>; if they’d tried to save money as they originally planned, by 
+bringing everything up-to-date, the movie simply wouldn’t have worked. But it’s
+&quot;&quot;&quot;
+
+**Page 3**
+&quot;&quot;&quot;
+<span class="lx-highlight" data-idx="21" style="background-color:#C8E6C9;">uncannily successful as a period piece</span>, ﬁ<span class="lx-highlight" data-idx="22" style="background-color:#C8E6C9;">lled with sleek, bulging limousines and 
+postwar fedoras</span>. <span class="lx-highlight" data-idx="23" style="background-color:#C8E6C9;">Coppola and his cinematographer, Gordon Willis, also do some 
+interesting things with the color photography</span>. <span class="lx-highlight" data-idx="24" style="background-color:#C8E6C9;">The earlier scenes have a reddish-
+brown tint, slightly overexposed and feeling like nothing so much as a 1946 
+newspaper rotogravure supplement</span>. 
+Although the movie is three hours long, it <span class="lx-highlight" data-idx="25" style="background-color:#D2E3FC;">absorbs us so</span> eJectively it never has to 
+hurry. There is something in the measured passage of time as Don Corleone 
+hands over his reins of power that would have made a shorter, faster moving ﬁlm 
+unseemly. Even at this length, <span class="lx-highlight" data-idx="26" style="background-color:#C8E6C9;">there are characters in relationships you can’t 
+quite understand unless you’ve read the novel</span>. Or perhaps you can, just by the 
+way the characters look at each other.
+&quot;&quot;&quot;
+
+
+      </div>
+      <div class="lx-controls">
+        <div class="lx-button-row">
+          <button class="lx-control-btn" onclick="playPause()">▶️ Play</button>
+          <button class="lx-control-btn" onclick="prevExtraction()">⏮ Previous</button>
+          <button class="lx-control-btn" onclick="nextExtraction()">⏭ Next</button>
+        </div>
+        <div class="lx-progress-container">
+          <input type="range" id="progressSlider" class="lx-progress-slider"
+                 min="0" max="26" value="0"
+                 onchange="jumpToExtraction(this.value)">
+        </div>
+        <div class="lx-status-text">
+          Entity <span id="entityInfo">1/27</span> |
+          Pos <span id="posInfo">[396-489]</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const extractions = [{"index": 0, "class": "opinion_statement", "text": "brushes aside the \ufb02ashy glamour of the traditional gangster picture and gives us what\u2019s left", "color": "#C8E6C9", "startPos": 396, "endPos": 489, "beforeText": " stuJy \nrooms and a bad diet of carry-out food, punctuated by brief, terrible bursts of \nviolence. This is exactly the feel of \u201cThe Godfather,\u201d which ", "extractionText": "brushes aside the \n\ufb02ashy glamour of the traditional gangster picture and gives us what\u2019s left", "afterText": ": \ufb01erce \ntribal loyalties, deadly little neighborhood quarrels in Brooklyn, and a form of \nvengeance to match every aJront. \nThe remarkable thing abou", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The movie</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">brushes aside the \ufb02ashy glamour ... gives us what\u2019s left</span>}</div>"}, {"index": 1, "class": "opinion_statement", "text": "\ufb01erce tribal loyalties, deadly little neighborhood quarrels in Brooklyn, and a form of vengeance to match every aJront", "color": "#C8E6C9", "startPos": 491, "endPos": 611, "beforeText": "ce. This is exactly the feel of \u201cThe Godfather,\u201d which brushes aside the \n\ufb02ashy glamour of the traditional gangster picture and gives us what\u2019s left: ", "extractionText": "\ufb01erce \ntribal loyalties, deadly little neighborhood quarrels in Brooklyn, and a form of \nvengeance to match every aJront", "afterText": ". \nThe remarkable thing about Mario Puzo\u2019s novel was the way it seemed to be told \nfrom the inside out; he didn\u2019t give us a world of international int", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The movie</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">\ufb01erce tribal loyalties, deadly little neighborhood quarrels, form of vengeance</span>}</div>"}, {"index": 2, "class": "opinion_statement", "text": "the way it seemed to be told from the inside out", "color": "#C8E6C9", "startPos": 664, "endPos": 713, "beforeText": ", deadly little neighborhood quarrels in Brooklyn, and a form of \nvengeance to match every aJront. \nThe remarkable thing about Mario Puzo\u2019s novel was ", "extractionText": "the way it seemed to be told \nfrom the inside out", "afterText": "; he didn\u2019t give us a world of international intrigue, but a \nprivate club as constricted as the seventh grade. Everybody knew everybody else \nand had", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Mario Puzo\u2019s novel</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">told from the inside out</span>}</div>"}, {"index": 3, "class": "opinion_statement", "text": "a private club as constricted as the seventh grade", "color": "#C8E6C9", "startPos": 772, "endPos": 823, "beforeText": "rkable thing about Mario Puzo\u2019s novel was the way it seemed to be told \nfrom the inside out; he didn\u2019t give us a world of international intrigue, but ", "extractionText": "a \nprivate club as constricted as the seventh grade", "afterText": ". Everybody knew everybody else \nand had a pretty shrewd hunch what they were up to. \nThe movie (based on a script labored over for some time by Puzo ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The world of the novel</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">private club as constricted as the seventh grade</span>}</div>"}, {"index": 4, "class": "opinion_statement", "text": "gets the same feel", "color": "#C8E6C9", "startPos": 1047, "endPos": 1065, "beforeText": "ere up to. \nThe movie (based on a script labored over for some time by Puzo and then \ufb01nally \ngiven form, I suspect, by director Francis Ford Coppola) ", "extractionText": "gets the same feel", "afterText": ". We \ntend to identify with Don Corleone\u2019s family not because we dig gang wars, but \nbecause we have been with them from the beginning, watching them ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The movie</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">gets the same feel</span>}</div>"}, {"index": 5, "class": "opinion_statement", "text": "watching them wait for battle while sitting at the kitchen table and eating chow mein out of paper cartons", "color": "#C8E6C9", "startPos": 1201, "endPos": 1309, "beforeText": " the same feel. We \ntend to identify with Don Corleone\u2019s family not because we dig gang wars, but \nbecause we have been with them from the beginning, ", "extractionText": "watching them wait for \nbattle while sitting at the kitchen table and eating chow mein out of paper \ncartons", "afterText": ". \n\u201cThe Godfather\u201d himself is not even the central character in the drama. That \nposition goes to the youngest, brightest son, Michael, who understand", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The family</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">watching them wait for battle while sitting at the kitchen table and eating chow mein out of paper cartons</span>}</div>"}, {"index": 6, "class": "opinion_statement", "text": "not even the central character in the drama", "color": "#C8E6C9", "startPos": 1339, "endPos": 1382, "beforeText": " beginning, watching them wait for \nbattle while sitting at the kitchen table and eating chow mein out of paper \ncartons. \n\u201cThe Godfather\u201d himself is ", "extractionText": "not even the central character in the drama", "afterText": ". That \nposition goes to the youngest, brightest son, Michael, who understands the \nnature of his father\u2019s position while revising his old-fashioned w", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The Godfather</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Neutral</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">not even the central character</span>}</div>"}, {"index": 7, "class": "opinion_statement", "text": "the youngest, brightest son, Michael, who understands the nature of his father\u2019s position while revising his old-fashioned ways", "color": "#C8E6C9", "startPos": 1407, "endPos": 1535, "beforeText": "hen table and eating chow mein out of paper \ncartons. \n\u201cThe Godfather\u201d himself is not even the central character in the drama. That \nposition goes to ", "extractionText": "the youngest, brightest son, Michael, who understands the \nnature of his father\u2019s position while revising his old-fashioned ways", "afterText": ". The \nGodfather\u2019s role in the family enterprise is described by his name; he stands \noutside the next generation which will carry on and, hopefully, ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Michael</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">youngest, brightest son, who understands... while revising his old-fashioned ways</span>}</div>"}, {"index": 8, "class": "opinion_statement", "text": "an economical way", "color": "#C8E6C9", "startPos": 1873, "endPos": 1890, "beforeText": "rprises. \nThose who have read the novel may be surprised to \ufb01nd Michael at the center of \nthe movie, instead of Don Corleone. In fact, this is simply ", "extractionText": "an economical way", "afterText": " for\n&quot;&quot;&quot;\n\n**Page 2**\n&quot;&quot;&quot;\nCoppola to get at the heart of the Puzo story, which dealt with the transfer of \npower within the family. Marlon Brando, who ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Michael at the center of the movie</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">economical way</span>}</div>"}, {"index": 9, "class": "opinion_statement", "text": "Marlon Brando, who plays the Godfather as a shrewd, unbreakable old man, actually has the character lead in the movie", "color": "#C8E6C9", "startPos": 2021, "endPos": 2139, "beforeText": "y an economical way for\n&quot;&quot;&quot;\n\n**Page 2**\n&quot;&quot;&quot;\nCoppola to get at the heart of the Puzo story, which dealt with the transfer of \npower within the family. ", "extractionText": "Marlon Brando, who plays the Godfather as a shrewd, \nunbreakable old man, actually has the character lead in the movie", "afterText": "; Al Pacino, \nwith a brilliantly developed performance as Michael, is the lead. \nBut Brando\u2019s performance is a skillful throwaway, even though it earn", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Marlon Brando&#x27;s performance</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">shrewd, unbreakable old man</span>}</div>"}, {"index": 10, "class": "opinion_statement", "text": "Al Pacino, with a brilliantly developed performance as Michael, is the lead", "color": "#C8E6C9", "startPos": 2141, "endPos": 2217, "beforeText": " of \npower within the family. Marlon Brando, who plays the Godfather as a shrewd, \nunbreakable old man, actually has the character lead in the movie; ", "extractionText": "Al Pacino, \nwith a brilliantly developed performance as Michael, is the lead", "afterText": ". \nBut Brando\u2019s performance is a skillful throwaway, even though it earned him an \nAcademy Award for best actor. His voice is wheezy and whispery, and", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Al Pacino&#x27;s performance</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">brilliantly developed</span>}</div>"}, {"index": 11, "class": "opinion_statement", "text": "Brando\u2019s performance is a skillful throwaway", "color": "#C8E6C9", "startPos": 2224, "endPos": 2268, "beforeText": "unbreakable old man, actually has the character lead in the movie; Al Pacino, \nwith a brilliantly developed performance as Michael, is the lead. \nBut ", "extractionText": "Brando\u2019s performance is a skillful throwaway", "afterText": ", even though it earned him an \nAcademy Award for best actor. His voice is wheezy and whispery, and his \nphysical movements deliberately lack precisio", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Brando&#x27;s performance</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">skillful throwaway</span>}</div>"}, {"index": 12, "class": "opinion_statement", "text": "His voice is wheezy and whispery, and his physical movements deliberately lack precision", "color": "#C8E6C9", "startPos": 2330, "endPos": 2419, "beforeText": "d performance as Michael, is the lead. \nBut Brando\u2019s performance is a skillful throwaway, even though it earned him an \nAcademy Award for best actor. ", "extractionText": "His voice is wheezy and whispery, and his \nphysical movements deliberately lack precision", "afterText": "; the eJect is of a man so \naccustomed to power that he no longer needs to remind others. Brando does \nlook the part of old Don Corleone, mostly becau", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Brando&#x27;s performance</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">wheezy and whispery, and his physical movements deliberately lack precision</span>}</div>"}, {"index": 13, "class": "opinion_statement", "text": "the eJect is of a man so accustomed to power that he no longer needs to remind others", "color": "#C8E6C9", "startPos": 2421, "endPos": 2507, "beforeText": "ven though it earned him an \nAcademy Award for best actor. His voice is wheezy and whispery, and his \nphysical movements deliberately lack precision; ", "extractionText": "the eJect is of a man so \naccustomed to power that he no longer needs to remind others", "afterText": ". Brando does \nlook the part of old Don Corleone, mostly because of acting and partly because \nof the makeup, although he seems to have stuJed a littl", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Brando&#x27;s portrayal of the character</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">accustomed to power that he no longer needs to remind others</span>}</div>"}, {"index": 14, "class": "opinion_statement", "text": "Brando does look the part of old Don Corleone", "color": "#C8E6C9", "startPos": 2509, "endPos": 2555, "beforeText": "ery, and his \nphysical movements deliberately lack precision; the eJect is of a man so \naccustomed to power that he no longer needs to remind others. ", "extractionText": "Brando does \nlook the part of old Don Corleone", "afterText": ", mostly because of acting and partly because \nof the makeup, although he seems to have stuJed a little too much cotton into \nhis jowls, making his lo", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Brando&#x27;s appearance</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">look the part</span>}</div>"}, {"index": 15, "class": "opinion_statement", "text": "the rest of the actors supply one example after another of inspired casting", "color": "#C8E6C9", "startPos": 2725, "endPos": 2800, "beforeText": "acting and partly because \nof the makeup, although he seems to have stuJed a little too much cotton into \nhis jowls, making his lower face immobile. \n", "extractionText": "The rest of the actors supply one example after another of inspired casting", "afterText": ". \nAlthough \u201cThe Godfather\u201d is a long, minutely detailed movie of some three hours, \nthere naturally isn\u2019t time to go into the backgrounds and identit", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The rest of the actors</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">inspired casting</span>}</div>"}, {"index": 16, "class": "opinion_statement", "text": "Richard Castellano is an unshakable Clemenza", "color": "#C8E6C9", "startPos": 3319, "endPos": 3364, "beforeText": "blem with understated typecasting. \nAs the Irish cop, for example, they simply slide in Sterling Hayden and let the \ncharacter go about his business. ", "extractionText": "Richard Castellano is an unshakable \nClemenza", "afterText": ". John Marley makes a perfectly hateful Hollywood mogul (and, yes, he \nstill wakes up to \ufb01nd he\u2019ll have to cancel his day at the races). \nThe success ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Richard Castellano&#x27;s portrayal of Clemenza</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">unshakable</span>}</div>"}, {"index": 17, "class": "opinion_statement", "text": "John Marley makes a perfectly hateful Hollywood mogul", "color": "#C8E6C9", "startPos": 3366, "endPos": 3419, "beforeText": "h cop, for example, they simply slide in Sterling Hayden and let the \ncharacter go about his business. Richard Castellano is an unshakable \nClemenza. ", "extractionText": "John Marley makes a perfectly hateful Hollywood mogul", "afterText": " (and, yes, he \nstill wakes up to \ufb01nd he\u2019ll have to cancel his day at the races). \nThe success of \u201cThe Godfather\u201d as a novel was largely due to a seri", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">John Marley&#x27;s portrayal of the Hollywood mogul</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">perfectly hateful</span>}</div>"}, {"index": 18, "class": "opinion_statement", "text": "Puzo is a good storyteller, but no great shakes as a writer", "color": "#C8E6C9", "startPos": 3598, "endPos": 3657, "beforeText": "p to \ufb01nd he\u2019ll have to cancel his day at the races). \nThe success of \u201cThe Godfather\u201d as a novel was largely due to a series of \nunforgettable scenes. ", "extractionText": "Puzo is a good storyteller, but no great shakes as a writer", "afterText": ". \nThe movie gives almost everything in the novel except the gynecological repair \njob. It doesn\u2019t miss a single killing; it opens with the wedding of", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Puzo&#x27;s writing</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Neutral</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">good storyteller, but no great shakes as a writer</span>}</div>"}, {"index": 19, "class": "opinion_statement", "text": "a really good movie squeezed from a bestseller", "color": "#C8E6C9", "startPos": 4065, "endPos": 4112, "beforeText": "double crosses, and garrotings. \nCoppola has found a style and a visual look for all this material so \u201cThe \nGodfather\u201d becomes something of a rarity: ", "extractionText": "a really good movie squeezed from a \nbestseller", "afterText": ". The decision to shoot everything in period decor (the middle and late \n1940s) was crucial; if they\u2019d tried to save money as they originally planned,", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The Godfather</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">really good movie</span>}</div>"}, {"index": 20, "class": "opinion_statement", "text": "The decision to shoot everything in period decor (the middle and late 1940s) was crucial", "color": "#C8E6C9", "startPos": 4114, "endPos": 4203, "beforeText": "d a style and a visual look for all this material so \u201cThe \nGodfather\u201d becomes something of a rarity: a really good movie squeezed from a \nbestseller. ", "extractionText": "The decision to shoot everything in period decor (the middle and late \n1940s) was crucial", "afterText": "; if they\u2019d tried to save money as they originally planned, by \nbringing everything up-to-date, the movie simply wouldn\u2019t have worked. But it\u2019s\n&quot;&quot;&quot;\n\n*", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The decision to shoot everything in period decor</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">crucial</span>}</div>"}, {"index": 21, "class": "opinion_statement", "text": "uncannily successful as a period piece", "color": "#C8E6C9", "startPos": 4367, "endPos": 4405, "beforeText": "ied to save money as they originally planned, by \nbringing everything up-to-date, the movie simply wouldn\u2019t have worked. But it\u2019s\n&quot;&quot;&quot;\n\n**Page 3**\n&quot;&quot;&quot;\n", "extractionText": "uncannily successful as a period piece", "afterText": ", \ufb01lled with sleek, bulging limousines and \npostwar fedoras. Coppola and his cinematographer, Gordon Willis, also do some \ninteresting things with the", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The movie</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">uncannily successful</span>}</div>"}, {"index": 22, "class": "opinion_statement", "text": "filled with sleek, bulging limousines and postwar fedoras", "color": "#C8E6C9", "startPos": 4408, "endPos": 4464, "beforeText": "ned, by \nbringing everything up-to-date, the movie simply wouldn\u2019t have worked. But it\u2019s\n&quot;&quot;&quot;\n\n**Page 3**\n&quot;&quot;&quot;\nuncannily successful as a period piece, \ufb01", "extractionText": "lled with sleek, bulging limousines and \npostwar fedoras", "afterText": ". Coppola and his cinematographer, Gordon Willis, also do some \ninteresting things with the color photography. The earlier scenes have a reddish-\nbrow", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The movie</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">sleek, bulging limousines and postwar fedoras</span>}</div>"}, {"index": 23, "class": "opinion_statement", "text": "Coppola and his cinematographer, Gordon Willis, also do some interesting things with the color photography", "color": "#C8E6C9", "startPos": 4466, "endPos": 4573, "beforeText": "wouldn\u2019t have worked. But it\u2019s\n&quot;&quot;&quot;\n\n**Page 3**\n&quot;&quot;&quot;\nuncannily successful as a period piece, \ufb01lled with sleek, bulging limousines and \npostwar fedoras. ", "extractionText": "Coppola and his cinematographer, Gordon Willis, also do some \ninteresting things with the color photography", "afterText": ". The earlier scenes have a reddish-\nbrown tint, slightly overexposed and feeling like nothing so much as a 1946 \nnewspaper rotogravure supplement. \nA", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The color photography</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">interesting things</span>}</div>"}, {"index": 24, "class": "opinion_statement", "text": "The earlier scenes have a reddish-brown tint, slightly overexposed and feeling like nothing so much as a 1946 newspaper rotogravure supplement", "color": "#C8E6C9", "startPos": 4575, "endPos": 4719, "beforeText": "bulging limousines and \npostwar fedoras. Coppola and his cinematographer, Gordon Willis, also do some \ninteresting things with the color photography. ", "extractionText": "The earlier scenes have a reddish-\nbrown tint, slightly overexposed and feeling like nothing so much as a 1946 \nnewspaper rotogravure supplement", "afterText": ". \nAlthough the movie is three hours long, it absorbs us so eJectively it never has to \nhurry. There is something in the measured passage of time as D", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The earlier scenes</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">reddish-brown tint, slightly overexposed</span>}</div>"}, {"index": 25, "class": "audience_impact", "text": "absorbs us so effectively it never has to hurry", "color": "#D2E3FC", "startPos": 4765, "endPos": 4778, "beforeText": " tint, slightly overexposed and feeling like nothing so much as a 1946 \nnewspaper rotogravure supplement. \nAlthough the movie is three hours long, it ", "extractionText": "absorbs us so", "afterText": " eJectively it never has to \nhurry. There is something in the measured passage of time as Don Corleone \nhands over his reins of power that would have ", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">engaged, patient</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The movie&#x27;s length and pacing</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">us</span>}</div>"}, {"index": 26, "class": "opinion_statement", "text": "there are characters in relationships you can\u2019t quite understand unless you\u2019ve read the novel", "color": "#C8E6C9", "startPos": 4994, "endPos": 5088, "beforeText": "ured passage of time as Don Corleone \nhands over his reins of power that would have made a shorter, faster moving \ufb01lm \nunseemly. Even at this length, ", "extractionText": "there are characters in relationships you can\u2019t \nquite understand unless you\u2019ve read the novel", "afterText": ". Or perhaps you can, just by the \nway the characters look at each other.\n&quot;&quot;&quot;\n\n", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Characters and their relationships</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">can\u2019t quite understand</span>}</div>"}];
+        let currentIndex = 0;
+        let isPlaying = false;
+        let animationInterval = null;
+        let animationSpeed = 1.0;
+
+        function updateDisplay() {
+          const extraction = extractions[currentIndex];
+          if (!extraction) return;
+
+          document.getElementById('attributesContainer').innerHTML = extraction.attributesHtml;
+          document.getElementById('entityInfo').textContent = (currentIndex + 1) + '/' + extractions.length;
+          document.getElementById('posInfo').textContent = '[' + extraction.startPos + '-' + extraction.endPos + ']';
+          document.getElementById('progressSlider').value = currentIndex;
+
+          const playBtn = document.querySelector('.lx-control-btn');
+          if (playBtn) playBtn.textContent = isPlaying ? '⏸ Pause' : '▶️ Play';
+
+          const prevHighlight = document.querySelector('.lx-text-window .lx-current-highlight');
+          if (prevHighlight) prevHighlight.classList.remove('lx-current-highlight');
+          const currentSpan = document.querySelector('.lx-text-window span[data-idx="' + currentIndex + '"]');
+          if (currentSpan) {
+            currentSpan.classList.add('lx-current-highlight');
+            currentSpan.scrollIntoView({block: 'center', behavior: 'smooth'});
+          }
+        }
+
+        function nextExtraction() {
+          currentIndex = (currentIndex + 1) % extractions.length;
+          updateDisplay();
+        }
+
+        function prevExtraction() {
+          currentIndex = (currentIndex - 1 + extractions.length) % extractions.length;
+          updateDisplay();
+        }
+
+        function jumpToExtraction(index) {
+          currentIndex = parseInt(index);
+          updateDisplay();
+        }
+
+        function playPause() {
+          if (isPlaying) {
+            clearInterval(animationInterval);
+            isPlaying = false;
+          } else {
+            animationInterval = setInterval(nextExtraction, animationSpeed * 1000);
+            isPlaying = true;
+          }
+          updateDisplay();
+        }
+
+        window.playPause = playPause;
+        window.nextExtraction = nextExtraction;
+        window.prevExtraction = prevExtraction;
+        window.jumpToExtraction = jumpToExtraction;
+
+        updateDisplay();
+      })();
+    </script>
