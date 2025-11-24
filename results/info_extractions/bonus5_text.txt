@@ -1,0 +1,6 @@
+
+講到文字前處理，有幾個常見錯誤同學一定要避免。
+第一個就是忘記全部轉小寫，導致 Apple 和 apple 被當成不同詞。
+第二個是直接用 stemming 而不是 lemmatization，會把 studies 變成 studi。
+第三個是沒有搭配 n-gram 使用 TF-IDF，特別在短文字上效果很差。
+正確流程應該是：lowercase → 移除標點 → tokenize → 移除 stop words → lemmatization → TF-IDF + bigram。

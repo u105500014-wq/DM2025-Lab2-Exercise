@@ -1,0 +1,5 @@
+
+在文字前處理的部分，很多同學會忘記把所有文字轉成小寫，導致 Apple 和 apple 被當成兩個不同的詞。
+另一個常見錯誤是用 stemming 而不是 lemmatization，會把 studies 變成 studi，這樣不準確。
+正確的流程應該是：先轉小寫 → 移除標點符號 → tokenize → 移除 stop words → lemmatization。
+最後在建立特徵時，建議使用 TF-IDF 搭配 bigram，特別是在處理推特這種短文字時效果最好。

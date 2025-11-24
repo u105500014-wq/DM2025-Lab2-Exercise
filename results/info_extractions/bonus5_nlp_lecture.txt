@@ -1,0 +1,17 @@
+
+今天的課程我們要講 Text Mining 與 NLP 基本流程。
+
+第一步是 Tokenization：把句子切成單字。例如 "I love machine learning" 會變成 ["I", "love", "machine", "learning"]。
+
+第二步要移除 Stop Words，像是 "I", "the", "and", "is" 這種出現超多次但沒什麼資訊的字。
+
+第三步是 Stemming 或 Lemmatization。Stemming 很暴力，像 "running" → "run", "happily" → "happi"。但 Lemmatization 比較聰明，它會考慮詞性，"better" → "good", "was" → "be"。
+
+清理完後我們要把文字變成數字。最簡單的是 Bag-of-Words：統計每個字出現幾次。
+但它有一個大問題：所有字權重都一樣。所以我們用 TF-IDF，罕見但重要的字會有更高分數。
+
+常見錯誤：忘記全部轉小寫，導致 "Apple" 和 "apple" 被當成兩個不同字。
+最佳實務：在處理推特這種短文字時，記得搭配 bigram 或 trigram 使用 TF-IDF，這樣 "machine learning" 才不會被切開。
+
+最後提醒大家：前處理順序很重要！正確順序是：
+1. 轉小寫  2. 移除標點  3. Tokenization  4. 移除停用詞  5. Lemmatization

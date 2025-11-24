@@ -1,0 +1,9 @@
+
+現在講文字前處理的細節。
+第一步一定要全部轉小寫，很多同學忘記這一步，導致 Apple 和 apple 被當成兩個不同的詞。
+第二步移除標點，第三步 tokenize。
+接著移除 stop words，例如 the, is, and, on。
+最後用 lemmatization 不要用 stemming，因為 lemmatization 會考慮詞性。
+在特徵工程時，建議用 TF-IDF 搭配 bigram 或 trigram，特別是在處理推特這種短文字時效果很好。
+常見錯誤：沒有先轉小寫，或是直接用 stemming 導致 studies 變成 studi。
+正確流程：lowercase → 移除標點 → tokenize → stop words → lemmatization → TF-IDF + n-gram。
